@@ -1,6 +1,11 @@
 <div id="dashB">
   <div id="menu">
-    <a routerLink="#" *ngFor="let item of dashboardItems">{{item.label}}</a>
+    <ng-container *ngFor="let item of dashboardItems">
+      <a
+        *ngIf="!item.hide"
+        [href]="item.link ? item.link : 'javascript:void(0)'"
+        (click)="item.fun ? item.fun() : ''"
+        >{{ item.label }}</a>
+    </ng-container>
   </div>
-
 </div>

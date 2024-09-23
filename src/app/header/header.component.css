@@ -1,0 +1,22 @@
+#header{
+    display: flex;
+    width: 100%;
+    padding: 20px  30px;
+    justify-content: space-between;
+    box-sizing: border-box;
+    box-shadow: 0px 4px 4px #ccc;
+  }
+  
+  #logo{
+    font-size: 20px;
+    font-weight: bold;
+    color: #333;
+    display: flex;
+    gap: 40px;
+    align-items: center;
+  }
+  
+  #logo svg{
+    cursor: pointer;
+  }
+  

@@ -1,22 +1,39 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
+import { AutenticService } from '../autentic.service';
 
 @Component({
   selector: 'app-dashboard',
   templateUrl: './dashboard.component.html',
-  styleUrls: ['./dashboard.component.css']
+  styleUrls: ['./dashboard.component.css'],
 })
-export class DashboardComponent implements OnInit {
-  dashboardItems: {label: string, link: string }[] = [
-    { label: 'Home', link: '/home'},
-    { label: 'Login', link: '/login'},
-    { label: 'Estoque', link: '/estoque'},
-    { label: 'Agenda', link: '/agenda'},
-    { label: 'Configuracao', link: '/configuracao'},
-  ];
-  constructor() { }
+export class DashboardComponent {
+  dashboardItems: {
+    label: string;
+    link?: string;
+    fun?: () => void;
+    hide?: boolean;
+  }[] = [];
 
-  ngOnInit(): void {
-
+  constructor(private autenService: AutenticService) {
+    this.generatedDashboard();
   }
 
+  generatedDashboard() {
+    this.dashboardItems = [
+      { label: 'Home', link: 'home' },
+      { label: 'Estoque', link: 'estoque' },
+      { label: 'Agenda', link: 'agenda' },
+      { label: 'Configuração', link: 'configuracao' },
+      {
+        label: 'Sair',
+        fun: () => {
+          this.autenService.logout();
+          this.generatedDashboard();
+        },
+        hide: !this.autenService.sessao,
+      },
+    ];
+  }
 }
+
+// https://www.youtube.com/watch?v=56vgnOzKjBU&t=55s

@@ -1,1 +1,12 @@
-<p>login works!</p>
+<div id="container" [ngClass]="{ barraActive: barraActive }">
+  <app-dashboard></app-dashboard>
+  <div id="conteudoContainer">
+    <app-header
+      (togglebarraActive)="barraActive = !barraActive"
+      [barraActive]="barraActive"
+    ></app-header>
+    <div id="content">
+      <router-outlet></router-outlet>
+    </div>
+  </div>
+</div>

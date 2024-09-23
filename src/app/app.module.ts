@@ -11,22 +11,25 @@ import { AgendaComponent } from './agenda/agenda.component';
 import { ConfiguracaoComponent } from './configuracao/configuracao.component';
 import { LoginNaoEncontradoComponent } from './login-nao-encontrado/login-nao-encontrado.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
+import { HeaderComponent } from './header/header.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
     AppComponent,
     DashboardComponent,
-    HomeComponent,
     LoginComponent,
     EstoqueComponent,
     AgendaComponent,
     ConfiguracaoComponent,
     ConfiguracaoComponent,
-    LoginNaoEncontradoComponent
+    LoginNaoEncontradoComponent,
+    HeaderComponent,
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
