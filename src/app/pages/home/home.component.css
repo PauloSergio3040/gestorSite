@@ -14,16 +14,10 @@
   color: white;
 }
 
-.closeTab{
+#closeTab{
   position: absolute;
-  left: 335px;
-  margin-bottom: 75px;  
+  left: 350px;
+  margin-bottom: 80px;  
 }
 
-.closeTab img{
-  position: absolute;
-  height: 35px;
-  width: 35px;
-  right: 6px;
-  bottom: 6px;
-}
+

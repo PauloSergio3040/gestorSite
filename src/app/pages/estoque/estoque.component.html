@@ -1,0 +1,11 @@
+
+
+<div class="btnBall" (click)="flyout()">
+  <a class="material-icons"  >{{iconeBtn}}</a>
+</div>
+
+<div class="flyout" *ngIf="aberto">
+  <a (click)="abrirPopup()">Criar Produto</a>
+  <hr>
+  <a>Adicionar quantidade</a>
+</div>

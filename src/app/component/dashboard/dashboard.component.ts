@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { AutenticService } from '../autentic.service';
+import { AutenticService } from '../../../Service/autentic.service';
 
 @Component({
   selector: 'app-dashboard',
