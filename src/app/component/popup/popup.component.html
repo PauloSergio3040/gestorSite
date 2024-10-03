@@ -1,7 +1,27 @@
 <h1 mat-dialog-title>testando</h1>
-<div mat-dialog-content>
-    
-</div>
-<div mat-dialog-actions>
 
+<div mat-dialog-content>
+  <form class="content">
+    <div class="putImg">
+      <img [src]="busc" />
+      <input type="file" (change)="pegarImg($event)" />
+    </div>
+
+    <div class="putInfo">
+      <mat-form-field class="larg">
+        <mat-label>Input</mat-label>
+        <input matInput />
+      </mat-form-field>
+
+      <mat-form-field class="larg">
+        <mat-label>Textarea</mat-label>
+        <textarea matInput></textarea>
+      </mat-form-field>
+    </div>
+  </form>
+</div>
+
+<div mat-dialog-actions>
+  <button class="btn btn-small" >excluir item</button>
+  <button class="btn btn-small" >salvar item</button>
 </div>

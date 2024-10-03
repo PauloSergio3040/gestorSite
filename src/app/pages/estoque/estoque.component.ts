@@ -25,6 +25,8 @@ export class EstoqueComponent {
 
 
   abrirPopup(){
-    this.dialog.open(PopupComponent)
+    this.dialog.open(PopupComponent, {
+      width: '60%'
+    })
   }
 }

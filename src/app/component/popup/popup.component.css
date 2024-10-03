@@ -1,0 +1,36 @@
+mat-card{
+    text-align: left;
+    margin: 2%;
+}
+
+.mat-mdc-form-field {
+    width: 48%;
+    margin: 2px;
+}
+
+.content{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    min-width: 100px;
+    max-width: 600px;
+    width: 100%;
+}
+
+.putImg{
+    height: 30%;
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+}
+
+.putInfo{
+    display: flex;
+    flex-direction: column;
+    margin: 10px 20px;
+}
+
+.larg{
+    width: 100%;
+}
