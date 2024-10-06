@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { MatDialogRef } from '@angular/material/dialog';
+import { FormControl, FormGroup } from '@angular/forms';
 
 
 @Component({
@@ -10,14 +12,31 @@ import { Component } from '@angular/core';
 export class PopupComponent {
   // https://www.youtube.com/watch?v=zUp3Unc-ynM
 
+  constructor(private ref: MatDialogRef<PopupComponent>){}
+  
+  formu = new FormGroup({
+    campoTit: new FormControl(''),
+    campoDesc: new FormControl('')
+  });
+
+  enviar(){
+    const dadoTit = this.formu.get('campoTit')?.value as string;
+    const dadoDesc = this.formu.get('campoDesc')?.value as string;
+
+    this.ref.close({titulo: dadoTit, desc: dadoDesc, imagem: this.busc});
+  }
+
   busc: any;
 
   pegarImg(event: any){
     if(event.target.files){
       const arq = event.target.files[0];
       const read = new FileReader();
-      read.onload = e => this.busc = read.result;
+
+      read.onload = e => { this.busc = read.result; };
       read.readAsDataURL(arq);
     }
   } 
+
+
 }

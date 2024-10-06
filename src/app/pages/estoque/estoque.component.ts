@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
 import { PopupComponent } from '../../component/popup/popup.component';
+import { Item } from 'src/app/component/models/Item';
 
 
 @Component({
@@ -10,23 +11,36 @@ import { PopupComponent } from '../../component/popup/popup.component';
 })
 export class EstoqueComponent {
 
+  titulo:string = '';
+  desc:string = '';
+
+  items: Item[] = [];
+ 
+  aberto = false;
+
   constructor(public dialog:MatDialog){}
 
-  aberto = false;
-  
   flyout() {
     this.aberto = !this.aberto;
-    
   }
 
   get iconeBtn(){
     return this.aberto ? 'close' : 'add';
   }
 
-
   abrirPopup(){
-    this.dialog.open(PopupComponent, {
+    const dialogRef = this.dialog.open(PopupComponent, {
       width: '60%'
     })
+
+    dialogRef.afterClosed().subscribe(result => {
+      if (result) {
+        this.titulo = result.titulo; 
+        this.desc = result.desc;
+        const receiveImg = result.imagem;
+        
+        this.items.push({ nome: this.titulo, descricao: this.desc, img: receiveImg });
+      }
+    });
   }
 }

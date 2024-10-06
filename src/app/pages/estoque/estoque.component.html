@@ -1,3 +1,10 @@
+
+<div class="itemAdicionado" *ngFor="let item of items">
+  <h1>{{item.nome}}</h1>
+  <p>{{item.descricao}}</p>
+  <img [src]="item.img"/>
+</div>
+
 <div class="btnBall"  (click)="flyout()">
   <i class="material-icons">{{iconeBtn}}</i>
 </div>

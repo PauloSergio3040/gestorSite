@@ -17,7 +17,8 @@ import { MatDialogModule } from '@angular/material/dialog';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { PopupComponent } from './component/popup/popup.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { CommonModule } from '@angular/common';
 
 @NgModule({
   declarations: [
@@ -31,7 +32,7 @@ import { FormsModule } from '@angular/forms';
     ConfiguracaoComponent,
     LoginNaoEncontradoComponent,
     HeaderComponent,
-    PopupComponent
+    PopupComponent,
   ],
   imports: [
     BrowserModule,
@@ -40,7 +41,9 @@ import { FormsModule } from '@angular/forms';
     MatDialogModule,
     MatFormFieldModule,
     MatInputModule,
-    FormsModule    
+    FormsModule,
+    ReactiveFormsModule,
+    CommonModule
   ],
   providers: [],
   bootstrap: [AppComponent],
