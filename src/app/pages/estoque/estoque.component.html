@@ -1,8 +1,11 @@
 
 <div class="itemAdicionado" *ngFor="let item of items">
-  <h1>{{item.nome}}</h1>
-  <p>{{item.descricao}}</p>
   <img [src]="item.img"/>
+  <h3 class="titulo">{{item.nome}}</h3>
+  <p class="desc">{{item.descricao}}</p>
+  <button mat-icon-button (click)="editaProd()">
+    <mat-icon>mode_edit</mat-icon>
+  </button>
 </div>
 
 <div class="btnBall"  (click)="flyout()">
@@ -12,5 +15,5 @@
 <div class="flyout" *ngIf="aberto">
   <a (click)="abrirPopup()">Criar Produto</a>
   <hr>
-  <a>Adicionar quantidade</a>
+  <a (click)="selecProd()">Adicionar quantidade</a>
 </div>

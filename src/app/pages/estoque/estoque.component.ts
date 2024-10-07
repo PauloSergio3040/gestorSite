@@ -13,10 +13,9 @@ export class EstoqueComponent {
 
   titulo:string = '';
   desc:string = '';
-
   items: Item[] = [];
- 
   aberto = false;
+  checado = false;
 
   constructor(public dialog:MatDialog){}
 
@@ -35,12 +34,17 @@ export class EstoqueComponent {
 
     dialogRef.afterClosed().subscribe(result => {
       if (result) {
-        this.titulo = result.titulo; 
+        this.titulo = result.titulo;
         this.desc = result.desc;
         const receiveImg = result.imagem;
-        
+
         this.items.push({ nome: this.titulo, descricao: this.desc, img: receiveImg });
       }
     });
   }
+
+  editaProd(){
+
+  }
+
 }

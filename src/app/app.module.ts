@@ -16,9 +16,12 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatDialogModule } from '@angular/material/dialog';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
+import { MatIconModule } from '@angular/material/icon'
+
 import { PopupComponent } from './component/popup/popup.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
+import { ProdutoComponent } from './pages/produto/produto.component';
 
 @NgModule({
   declarations: [
@@ -33,6 +36,7 @@ import { CommonModule } from '@angular/common';
     LoginNaoEncontradoComponent,
     HeaderComponent,
     PopupComponent,
+    ProdutoComponent,
   ],
   imports: [
     BrowserModule,
@@ -41,6 +45,7 @@ import { CommonModule } from '@angular/common';
     MatDialogModule,
     MatFormFieldModule,
     MatInputModule,
+    MatIconModule,
     FormsModule,
     ReactiveFormsModule,
     CommonModule

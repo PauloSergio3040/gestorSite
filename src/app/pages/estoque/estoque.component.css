@@ -19,8 +19,8 @@
 }
 
 .flyout {
-  position: absolute; 
-  right: 26px; 
+  position: absolute;
+  right: 26px;
   bottom: 90px;
   background: white;
   border: 1px solid #ccc;
@@ -29,7 +29,7 @@
   z-index: 1000;
   flex-direction: column;
   display: flex;
-  align-items: flex-start; 
+  align-items: flex-start;
 }
 
 .flyout a{
@@ -47,8 +47,29 @@ hr{
 
 .itemAdicionado{
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   background-color: #000;
   color: white;
   border: 1px solid #007bff;
+  width: 70%;
+  height: 90%;
+  border-radius: 10px;
+  justify-content: center;
+  margin-left: 50px;
+  margin-top: 10px;
+}
+
+.itemAdicionado img{
+  width: 20%;
+  height: 20%;
+  border-radius: 10px;
+  margin: 10px 10px;
+}
+
+.titulo{
+  font-size: 6vh;
+}
+
+.titulo, .desc{
+  flex-direction: column;
 }
