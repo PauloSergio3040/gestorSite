@@ -6,7 +6,7 @@ import { AppRoutingModule } from './app-routing.module';
 
 import { LoginComponent } from './pages/login/login.component';
 import { EstoqueComponent } from './pages/estoque/estoque.component';
-import { AgendaComponent } from './pages/agenda/agenda.component';
+import { CalendarComponent } from './pages/agenda/agenda.component';
 import { ConfiguracaoComponent } from './component/configuracao/configuracao.component';
 import { LoginNaoEncontradoComponent } from './pages/login-nao-encontrado/login-nao-encontrado.component';
 import { DashboardComponent } from './component/dashboard/dashboard.component';
@@ -30,7 +30,7 @@ import { ProdutoComponent } from './pages/produto/produto.component';
     LoginComponent,
     // HomeComponent,
     EstoqueComponent,
-    AgendaComponent,
+    CalendarComponent,
     ConfiguracaoComponent,
     ConfiguracaoComponent,
     LoginNaoEncontradoComponent,
